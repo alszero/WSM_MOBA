@@ -4,12 +4,12 @@
   padding: 0;
 }
 body{
-  padding: 20px;
+  padding: 100px;
 }
 /* grid 속성 */
 .grid{
   display: grid;
-  max-width: 900px;
+  width: 900px;
   width: 100%;
   margin: 0 auto;
   background: #FF0;
@@ -31,4 +31,20 @@ div.item{  /* .grid 내부에 들어갈 요소 클래스 값*/
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* tablet버전 */
+@media screen and (min-width:420px) {
+    .item{
+      width:calc(50% -10px);
+      max-width: unset;
+    }
+}
+
+/* mobile버전 */
+@media screen and (max-width: 419px) {
+  .item{
+    width: 100%;
+    max-width: unset;
+  }
 }
