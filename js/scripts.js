@@ -1,7 +1,13 @@
-/*!
-* Start Bootstrap - Bare v5.0.7 (https://startbootstrap.com/template/bare)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-bare/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+function SetGridItemHeight(){
+    let grid = document.getElementsByClassName('grid')[0];
+    let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+
+    let item = grid.getElementsByClassName('item');
+    for(let i=0; i<item.length; ++i){
+        item[i].style.gridRowEnd = 
+                item[i].style.gridRowEnd = `span ${Math.floor((item[i].children[0].offsetHeight) / 25)}`
+    }
+} 
+window.addEventListener("load", SetGridItemHeight);
+window.addEventListener("resize", SetGridItemHeight);
