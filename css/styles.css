@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body>.grid{
+  padding: 100px;
+}
+/* grid 속성 */
+.grid{
+  display: grid;
+  width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 400px;
+  /* 격자무늬 */
+  grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows:20px;
+  grid-gap:10px;
+}
+div.item{  /* .grid 내부에 들어갈 요소 클래스 값*/
+  width: 100%; 
+  overflow: hidden; 
+  position: relative;
+}
+
+.item > img{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* tablet버전 */
+@media screen and (min-width:420px) {
+    .item{
+      width:calc(50% -10px);
+      max-width: unset;
+    }
+}
+
+/* mobile버전 */
+@media screen and (max-width: 419px) {
+  .item{
+    width: 100%;
+    max-width: unset;
+  }
+}
