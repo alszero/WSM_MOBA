@@ -10,6 +10,11 @@
     margin-top: 50px;
 }
 
+#profile {
+    width: 30px;
+    height: 30px;
+}
+
 #content {
     border: 2px dotted darkblue;
     width: 87%;
