@@ -18,11 +18,30 @@
 .nav-list {
     display: flex;  /* 기본값: 수평 방향 */
     column-gap: 1.25rem;  /*20px*/
+    border: none;
+}
+
+.logo2 {
+    display: none;
 }
 
 .nav-link {
     color: #fff;
 }
+
+.profile {
+    display: none;
+}
+
+.minifooter {
+    display: none;
+}
+
+.btn {
+    display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width: 1508px) {  /* width가 600px가 되면 펼쳐짐 */
     .nav-toggle {
@@ -41,26 +60,75 @@
         height: 0;
         overflow: hidden;
         transition: 0.17s;
+        border: 0.3px solid #fff;
     }
 
     .nav-link {
-        color: var(--title-color);
+        color: #1d1d1d;
         display: block;  /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
+    }
+
+    .logo2 {
+        display: block;
+        width: 120px;
+    }
+
+    .profile {
+        width: 120px;
+        border-radius: 50%;
+        border: 1px solid #1d1d1d;
+        top: 90px;
+        position: absolute;
+        left: 30px;
+        display: block;
+    }
+
+    .pro {
+        width: 300px;
+        height: 130px;
+        background: rgb(255, 255, 212);
+        margin-top: 150px;
+        margin-left: 16px;
+        border-radius: 16px;
+    }
+
+    .btn {
+        width: 200px;
+        margin: 30px 0px 20px 68px;
+        background-color: #1d1d1d;
+        color: #fff;
+        display: block;
+        height: 40px;
+        border-radius: 16px;
     }
 
     .nav-item {
         padding: 0.5rem 1rem;  /* 위오아왼 */
         text-align: center;  /* 가운데 정렬 */
-        border-bottom: 1.2px solid #fff;  /* 아래 선 */
+        border-bottom: 1px solid white;  /* 아래 선 */
     }
 
-    .nav-logo {
-        margin: 0 auto;  /* 로고 가운데 정렬 */
+    .minifooter {
+        display: block;
+    }
+
+    .minifooter li {
+        display: block;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        list-style: none;
+        margin: 20px auto;
+        left: 56px;
+    }
+
+    .nav-footer {
+        color: #1d1d1d;
     }
 
     .show-menu {
         z-index: 999;
-        height: 682.8px;
+        height: 603px;
     }
 }
 
@@ -73,37 +141,18 @@
 
     .nav-list {
         position: absolute;
-        top: 44px;
-        left: 0;
-        /* width: 100%; */
-        right: 0;
-        flex-direction: column;
-        background-color: lightgrey;
-        height: 0;
-        overflow: hidden;
-        transition: 0.17s;
+        top: 47px;
     }
 
     .nav-link {
-        color: var(--title-color);
         display: block;  /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
     }
-
-    .nav-item {
-        padding: 0.5rem 1rem;  /* 위오아왼 */
-        text-align: center;  /* 가운데 정렬 */
-        border-bottom: 1px solid white;  /* 아래 선 */
-    }
-
-    .show-menu {
-        height: 164px;
-    }
 }
+/* ------------------------------------------------------------------------------------------------------------- */
 
 .search {
     position: relative;
     width: 780px;
-    margin-top: 60px;
     margin-left: 13%;
 }
 
@@ -123,6 +172,10 @@ input {
         font-size: 50px;
         left: 7px;
         top: 5px;
+    }
+
+    .search {
+        margin-top: 60px;
     }
 
     #logo {
@@ -146,7 +199,7 @@ input {
     .search {
         position: relative;
         width: 480px;
-        margin: 50px auto;
+        margin: 60px auto;
     }
     
     input {
@@ -171,8 +224,8 @@ input {
 
     .search {
         position: relative;
-        width: 370px;
-        margin: 50px auto;
+        width: 400px;
+        margin: 60px auto;
     }
     
     input {
@@ -183,6 +236,22 @@ input {
         font-size: 13px;
     }
     
+}
+
+@media screen and (max-width: 479px) {
+    .search {
+        position: relative;
+        width: 320px;
+        margin: 60px auto;
+    }
+
+    input {
+        width: 100%;
+        border: 2px solid #ffdc84;
+        border-radius: 30px;
+        padding: 10px 12px;
+        font-size: 11px;
+    }
 }
 
 #line {
@@ -221,7 +290,7 @@ input {
     position : absolute;
     font-size: 27px;
     top: 10.2px;
-    right: 8px;
+    right: 7.2px;
     margin: 0;
 }
 
