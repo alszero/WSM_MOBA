@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-toggle {
+    display: none;  /* 안 보이게 하자 */
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;  /* 기본값: 수평 방향 */
+    column-gap: 1.25rem;  /*20px*/
+}
+
+.nav-link {
+    color: #fff;
+}
+
+@media screen and (max-width: 1508px) {  /* width가 600px가 되면 펼쳐짐 */
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;  /* 위치 무시. 로고 가운데 정렬 */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 360px;
+        flex-direction: column;
+        background-color: #ffdc84;
+        height: 0;
+        overflow: hidden;
+        transition: 0.17s;
+    }
+
+    .nav-link {
+        color: var(--title-color);
+        display: block;  /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
+    }
+
+    .nav-item {
+        padding: 0.5rem 1rem;  /* 위오아왼 */
+        text-align: center;  /* 가운데 정렬 */
+        border-bottom: 1.2px solid #fff;  /* 아래 선 */
+    }
+
+    .nav-logo {
+        margin: 0 auto;  /* 로고 가운데 정렬 */
+    }
+
+    .show-menu {
+        z-index: 999;
+        height: 682.8px;
+    }
+}
+
+@media screen and (max-width: 479px) {  /* width가 600px가 되면 펼쳐짐 */
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;  /* 위치 무시. 로고 가운데 정렬 */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 44px;
+        left: 0;
+        /* width: 100%; */
+        right: 0;
+        flex-direction: column;
+        background-color: lightgrey;
+        height: 0;
+        overflow: hidden;
+        transition: 0.17s;
+    }
+
+    .nav-link {
+        color: var(--title-color);
+        display: block;  /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
+    }
+
+    .nav-item {
+        padding: 0.5rem 1rem;  /* 위오아왼 */
+        text-align: center;  /* 가운데 정렬 */
+        border-bottom: 1px solid white;  /* 아래 선 */
+    }
+
+    .show-menu {
+        height: 164px;
+    }
+}
+
+.search {
+    position: relative;
+    width: 780px;
+    margin-top: 60px;
+    margin-left: 13%;
+}
+
+input {
+    width: 100%;
+    border: 2.2px solid #ffdc84;
+    border-radius: 30px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1508px) {
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;  /* 위치 무시. 로고 가운데 정렬 */
+        font-size: 50px;
+        left: 7px;
+        top: 5px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #conversation {
+        display: none;
+    }
+    
+    #bell {
+        display: none;
+    }
+    
+    .img-circle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .search {
+        position: relative;
+        width: 480px;
+        margin: 50px auto;
+    }
+    
+    input {
+        width: 100%;
+        border: 2px solid #ffdc84;
+        border-radius: 30px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;  /* 위치 무시. 로고 가운데 정렬 */
+        font-size: 35px;
+        left: 7px;
+        top: 5px;
+    }
+
+    .search {
+        position: relative;
+        width: 370px;
+        margin: 50px auto;
+    }
+    
+    input {
+        width: 100%;
+        border: 2px solid #ffdc84;
+        border-radius: 30px;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+}
+
+#line {
+    position: absolute;
+    height: 35px;
+    width: 3px;
+    border-left: 2px solid #cdcdcd;
+    top: 3px;
+    right: 123px;
+}
+
+#cat {
+    position: absolute;
+    width: 19px;
+    top: 12px;
+    right: 95px;
+}
+
+#chevron-down {
+    position: absolute;
+    font-size: 28px;
+    top: 8px;
+    right: 60px;
+}
+
+#line2 {
+    position: absolute;
+    height: 35px;
+    width: 3px;
+    border-left: 2px solid #cdcdcd;
+    top: 3px;
+    right: 46px;
+}
+
+#search-icon {
+    position : absolute;
+    font-size: 27px;
+    top: 10.2px;
+    right: 8px;
+    margin: 0;
+}
+
+.search img:hover {
+    cursor: pointer;
+}
+
+#logo {
+    position : absolute;
+    width: 140px;
+    top: 49px;
+    right: 23.3%;
+    margin: 0;
+}
+
+#conversation {
+    position : absolute;
+    font-size: 27px;
+    top: 66px;
+    right: 20.3%;
+}
+
+#bell {
+    position : absolute;
+    font-size: 28px;
+    top: 64px;
+    right: 17%;
+}
+
+.img-circle {
+    width: 29px;
+    border-radius: 50%;
+    border: 1.7px solid #1d1d1d;
+    top: 60px;
+    position: absolute;
+    right: 13%;
+}
+
+/* columns------------------------------------------------------------------------------------------------------------- */
+#columns {
+    column-width: 350px;
+    /* border: 5px solid rebeccapurple; */
+    column-gap: 15px;
+    margin: 67px 30px 0px 30px;
+}
+
+@media screen and (max-width: 1023px) {
+    #columns {
+        column-width: 300px;
+        column-gap: 15px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #columns {
+        column-width: 250px;
+        column-gap: 15px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #columns {
+        column-width: 150px;
+        column-gap: 15px;
+        margin-top: 30px;
+    }
+}
+
+#columns figure {
+    display: inline-block;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 16px;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 16px;
+    /* box-shadow: 2px 2px 5px rgb(150, 150, 150); */
+}
+
+#columns figure img {
+    width: 100%;
+}
+
+#columns figure figcaption {
+    border-top: 1px solid rgb(209, 209, 209);
+    padding: 10px;
+    margin-top: 11px;
+}
+
+/* nav--------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+    nav {
+        position: fixed; /* 이 부분을 고정 */
+        bottom: 0; /* 하단에 여백 없이 */
+        width: 100%; /* 가로 사이즈를 브라우저에 가득 채움 */
+        background: #ffdc84;
+        height: 82px;
+    }
+
+    #home {
+        font-size: 60px;
+    }
+
+    #bxs {
+        font-size: 60px;
+    }
+
+    #cog {
+        font-size: 60px;
+    }
+    
+}

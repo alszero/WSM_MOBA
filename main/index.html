@@ -5,281 +5,289 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOBA</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 
-    <style>
-        /* search nav---------------------------------------------------------------------------------------------------------- */
-        header {
-	        display: flex;
-        } 
-
-        .search_box {
-            width: 670px;
-	        height: 30px;
-            border: 2px solid #1d1d1d;
-	        border-radius: 16px;
-	        display: flex;
-            margin: 0 auto;
-        }
-
-        .search_box input {
-            width: 650px;
-            margin: 0 auto;
-        }
-
-        input:focus {
-            outline:none;
-        }
-
-        /* columns------------------------------------------------------------------------------------------------------------- */
-        #columns {
-            column-width: 350px;
-            /* border: 5px solid rebeccapurple; */
-            column-gap: 15px;
-            margin-top: 60px;
-        }
-
-        #columns figure {
-            display: inline-block;
-            border: 1px solid rgb(209, 209, 209);
-            margin: 0;
-            margin-bottom: 15px;
-            padding: 10px;
-            box-shadow: 2px 2px 5px rgb(150, 150, 150);
-        }
-
-        #columns figure img {
-            width: 100%;
-        }
-        
-        #columns figure figcaption {
-            border-top: 1px solid rgb(209, 209, 209);
-            padding: 10px;
-            margin-top: 11px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 
-    <!-- search nav----------------------------------------------------------------------------------------------------------- -->
-    <header style="margin: 60px;">
-		<div class="search_box">
-			<input type="text" maxlength="225" style="height: 26px; border:0 solid black">
-		</div>
+    <header>
+        <div class="nav-toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item">
+                    <img id="logo" src="../img/logo.png">
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        CALENDAR
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        MAP
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        BOARD
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- search nav---------------------------------------------------------------------------------------------------------- -->
+		<div class="search">
+            <input type="text" placeholder="찾는 사람의 이름을 적어보세요!">
+            <div id="line"></div>
+            <img id="cat" src="https://cdn.discordapp.com/attachments/976476787515207700/991638307211575346/Cat_Emoji.png">
+            <i id="chevron-down" class='bx bx-chevron-down'></i>
+            <div id="line2"></div>
+            <i id="search-icon" class='bx bx-search'></i>
+        </div>
+        <img id="logo" src="../img/logo.png">
+        <i id="conversation" class='bx bx-conversation' ></i>
+        <i id="bell" class='bx bx-bell'></i>
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" id="img-circle" class="avatar img-circle img-thumbnail" alt="avatar">
 	</header>
 
     <!-- columns-------------------------------------------------------------------------------------------------------------- -->
     <div id="columns">
 
         <figure>
-            <img src="img/img01.jpg">
+            <img src="../img/img01.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img02.jpg">
+            <img src="../img/img02.jpg">
+            <figcaption>
+                2020.02.26 music awards
+            </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="../img/img03.jpg">
+            <figcaption>
+                2020.01.01 music awards
+            </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="../img/img04.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img03.jpg">
+            <img src="../img/img05.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img04.jpg">
+            <img src="../img/img06.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img05.jpg">
+            <img src="../img/img07.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img06.jpg">
+            <img src="../img/img08.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img07.jpg">
+            <img src="../img/img09.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img08.jpg">
+            <img src="../img/img10.jpg">
+            <figcaption>
+                2019.01.26 music awards
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../img/img01.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img09.jpg">
+            <img src="../img/img02.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img10.jpg">
-            <figcaption>
-                2019.01.26 music awards
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="img/img01.jpg">
+            <img src="../img/img03.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img02.jpg">
+            <img src="../img/img04.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img03.jpg">
+            <img src="../img/img05.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img04.jpg">
+            <img src="../img/img06.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img05.jpg">
+            <img src="../img/img07.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img06.jpg">
+            <img src="../img/img08.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img07.jpg">
+            <img src="../img/img09.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img08.jpg">
+            <img src="../img/img10.jpg">
+            <figcaption>
+                2019.01.26 music awards
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../img/img01.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img09.jpg">
+            <img src="../img/img02.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img10.jpg">
-            <figcaption>
-                2019.01.26 music awards
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="img/img01.jpg">
+            <img src="../img/img03.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img02.jpg">
+            <img src="../img/img04.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img03.jpg">
+            <img src="../img/img05.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img04.jpg">
+            <img src="../img/img06.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img05.jpg">
+            <img src="../img/img07.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img06.jpg">
+            <img src="../img/img08.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img07.jpg">
+            <img src="../img/img09.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
     
         <figure>
-            <img src="img/img08.jpg">
+            <img src="../img/img10.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
-    
+
         <figure>
-            <img src="img/img09.jpg">
-            <figcaption>
-                2019.01.26 music awards
-            </figcaption>
-        </figure>
-    
-        <figure>
-            <img src="img/img10.jpg">
+            <img src="../img/img01.jpg">
             <figcaption>
                 2019.01.26 music awards
             </figcaption>
         </figure>
 
     </div>
+
+    <!-- select--------------------------------------------------------------------------------------------------------------- -->
+    <nav class="nav container">
+        <div class="menu">
+            <a href="" class="nav-link">
+                <i id="home" class='bx bxs-home'></i>
+            </a>
+            <a href="" class="nav-link">
+                <i id="bxs" class='bx bxs-conversation'></i>
+            </a>
+            <a href="" class="nav-link">
+                <i id="cog" class='bx bxs-cog'></i>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/main.js"></script>
 
 </body>
 </html>
